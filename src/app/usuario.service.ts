@@ -12,7 +12,7 @@ export class UsuarioService {
   getUsuarios(): Observable<usuario[]> {
     return of(USUARIOS);
   }
-  
+
   constructor() { }
 }*/
 import { Injectable } from '@angular/core';
@@ -25,11 +25,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class UsuarioService {
 
-
-  /*getUsuarios(): Observable<usuario[]> {
-    return of(USUARIOS);
-  }*/
-  
   constructor(private http:HttpClient) { }
 
   private userUrl = 'http://localhost:8080/leerListaUsuariosRest';
@@ -39,6 +34,7 @@ export class UsuarioService {
   }
 
   public crearUsuario(usuario:usuario) {
+    debugger;
     return this.http.post<usuario>(this.userUrl, usuario);
   }
 }
