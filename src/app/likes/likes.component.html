@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class="row card-group">
+  <div class="col-2"  *ngFor="let usuario of usuarios" >
+      <div class="card" style="max-width: 1000px;" >
+        <img src="{{usuario.foto}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{usuario.nombre}}</h5>
+          <h5 class="card-title">{{usuario.edad}}</h5>
+          <h5 class="card-title">{{usuario.foto}}</h5>
+          <p class="card-text">ciudad</p>
+        </div>
+  </div>
+</div>
